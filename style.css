@@ -219,7 +219,6 @@ body {
 }
 
 /* Card Section */
-/* Card Section */
 .card-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 cards per row on PC/tablet */
