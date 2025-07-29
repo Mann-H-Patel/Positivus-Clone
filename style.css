@@ -1,0 +1,346 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Utility Classes */
+.bg-grey   { background-color: #F3F3F3; }
+.bg-green  { background-color: #B9FF66; }
+.bg-black  { background-color: #191A23; }
+.text-white { color: #fff; }
+
+/* Paragraph Background Overrides */
+.card.bg-grey p,
+.card.bg-black p { background-color: #B9FF66; }
+
+.card.bg-green p { background-color: #F3F3F3; }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 5vw;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+}
+
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.elements a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.elements a:hover {
+  background-color: #B9FF66;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1) translateY(-2px) rotateZ(-2deg);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Button */
+.nav-button,
+.heading button {
+  padding: 0.7em 1.4em;
+  border-radius: 13px;
+  background-color: white;
+  border: 0.5px solid black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.heading button {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 18rem;
+  animation: floatBounce 1.8s ease-in-out infinite;
+}
+
+.nav-button:hover,
+.heading button:hover {
+  background-color: #B9FF66;
+  color: black;
+  transform: scale(1.09) rotateZ(-1deg);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.home-page-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 6vw;
+  gap: 3rem;
+}
+
+.home-content,
+.home-img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.heading h1 {
+  font-size: 3.75rem;
+  line-height: 1.2;
+}
+
+.heading p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.home-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Animation */
+@keyframes floatBounce {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-6px, -6px); }
+  50% { transform: translate(0, -10px); }
+  75% { transform: translate(6px, -6px); }
+}
+
+/* Logos */
+.company-logos-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.company-logos-track {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+  animation: scrollLogos 20s linear infinite;
+  width: max-content;
+}
+
+.company-logos-track div {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logos-track img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: 0.4s ease;
+  will-change: transform, filter;
+}
+
+.company-logos-track img:hover {
+  transform: scale(1.4) rotateZ(-5deg);
+  filter: brightness(1.15) contrast(1.2);
+}
+
+@keyframes scrollLogos {
+  to { transform: translateX(-50%); }
+}
+
+/* Service Section */
+.service-section {
+  padding: 5vw;
+}
+
+.service-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  justify-content: flex-start;
+  padding: 3vw 4vw;
+}
+
+.service-title {
+  background-color: #B9FF66;
+  padding: 0.6em 1.2em;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.service-title:hover {
+  transform: scale(1.02) rotateZ(-3deg);
+}
+
+.service-info p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 40em;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Card Section */
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  grid-auto-rows: 310px;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  gap: 77px;
+  width: 600px;
+  height: 310px;
+  border: 1px solid #191A23;
+  box-shadow: 0 5px 0 #191A23;
+  border-radius: 45px;
+}
+
+.card h2 {
+  font-size: 33px;
+  margin-bottom: 10px;
+  color: #191A23;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  max-width: 220px;
+}
+
+.character-img {
+  width: 120px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elements {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .home-page-main {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5vw;
+  }
+
+  .heading h1 { font-size: 2rem; }
+  .heading p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .nav-button,
+  .heading button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading h1 { font-size: 1.6rem; }
+  .elements a { font-size: 0.95rem; }
+}
+
+/* Background utility classes */
+.bg-grey   { background-color: #F3F3F3; }
+.bg-green  { background-color: #B9FF66; }
+.bg-black  { background-color: #191A23; }
+
+/* Text utility */
+.text-white { color: #fff; }
+
+/* Paragraph background overrides */
+.card.bg-grey   h2,
+.card.bg-black  h2 { background-color: #B9FF66; padding: 10px; border-radius: 13px; text-decoration: line-through;}
+
+.card.bg-green  h2 { background-color: #F3F3F3; padding: 10px; border-radius: 13px; text-decoration: line-through;}
+
+/* External CSS */
+.learn-more-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 7px;
+}
+
+.circle-button {
+  width: 54px;
+  height: 54px;
+  background-color: #B9FF66;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  color: #191A23; /* makes the arrow black */
+}
+
+.arrow-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.learn-more-text {
+  color: #191A23;
+  background-color: #F3F3F3;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 30px;
+}
